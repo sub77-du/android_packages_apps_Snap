@@ -1793,13 +1793,6 @@ public class CameraActivity extends Activity
         if (!CameraUtil.hasCameraKey()) {
             mPowerShutter = val.equals(CameraSettings.VALUE_ON);
         }
-        if (mPowerShutter && mInCameraApp) {
-            getWindow().addPrivateFlags(
-                    WindowManager.LayoutParams.PRIVATE_FLAG_PREVENT_POWER_KEY);
-        } else {
-            getWindow().clearPrivateFlags(
-                    WindowManager.LayoutParams.PRIVATE_FLAG_PREVENT_POWER_KEY);
-        }
     }
 
     protected void initMaxBrightness(ComboPreferences prefs) {
